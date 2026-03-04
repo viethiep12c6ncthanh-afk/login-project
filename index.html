@@ -1,13 +1,37 @@
 <h2>Đăng nhập</h2>
 
 <label>Tên đăng nhập</label>
-<input type="text" id="txtusername"
+<input type="text" id="txtusername">
 
 <br><br>
 
 <label>Mật khẩu</label>
-<input type="password" id="txtpassword"
+<input type="password" id="txtpassword">
 
 <br><br>
 
-<button>Login</button>
+<button onclick="login()">Đăng nhập</button>
+
+<script>
+
+function login(){
+
+var user =
+document.getElementById("txtusername").value;
+
+var pass =
+document.getElementById("txtpassword").value;
+
+if(user=="admin" && pass=="admin"){
+
+window.location="success.html";
+
+}else{
+
+alert("Sai tài khoản");
+
+}
+
+}
+
+</script>
